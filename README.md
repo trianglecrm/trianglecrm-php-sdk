@@ -81,21 +81,21 @@ The last line is the actually soap request to your CRM instance.
 In our example we are calling IsCreditCardDupe with the parameters contained inside the $params array.
 
 ```php
-$result = $api->IsCreditCardDupe($params);
+	$result = $api->IsCreditCardDupe($params);
 ```
 
 Each response from the api is returned inside an PHP Object with three properties (State, Info, and Result ).
 
->><b>State</b> defines the status of the request operation to the server. The possible values are  Success or Error.
+><b>State</b> defines the status of the request operation to the server. The possible values are  Success or Error.
 
->><b>Info</b> is a string message giving more information on the api operation. 
+><b>Info</b> is a string message giving more information on the api operation. 
 	
->><b>Result</b> is the actual payload of data returned from the request.
+><b>Result</b> is the actual payload of data returned from the request.
 
 
 ```php	
-<b>print</b>( $result->State);
-<b>print</b> ( $result->Info);
-<b>print</b> ( $result->Result);
+    print( $result->State);
+    print ( $result->Info);
+    print( $result->Result);
 ```
 
