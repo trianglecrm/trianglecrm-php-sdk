@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="generator" content="ApiGen 2.8.0">
+
+	<title>Class TriangleCRM\TriangleAPI | trianglecrm-php-sdk</title>
+
+	<script type="text/javascript" src="resources/combined.js?554516056"></script>
+	<script type="text/javascript" src="elementlist.js?2801253729"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360">
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+				<li class="active"><a href="namespace-TriangleCRM.html">TriangleCRM</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-TriangleCRM.TriangleAPI.html">TriangleAPI</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-TriangleCRM.html" title="Summary of TriangleCRM"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class TriangleAPI</h1>
+
+
+	<div class="description">
+	
+<p>Triangle CRM PHP soapclient for intergrating to client CRM instance<br />
+Allows for seamless triangle CRM api integration<br />
+</p>
+
+<p>Getting started CheckList<br />
+</p>
+
+<p>1.Download and add the TriangleCRM folder into your project.<br />
+<br />
+</p>
+
+<p>2.Update the config file at TriangleCRM/config.ini<br />
+Settings section<br />
+Values: [Settings]<br />
+USERNAME = ‘YOUR_API_NAME’<br />
+PASSWORD = ‘YOUR_API_PASSWORD’<br />
+DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'<br />
+<br />
+</p>
+
+<p>3.Include php file TriangleCRM/TriangleAPI.php<br />
+Inside the file you will be calling the TriangleCRM API<br />
+<br />
+EX.<br />
+include(‘/TriangleCRM/TriangleAPI.php’);<br />
+or<br />
+include_once(‘/TriangleCRM/TriangleAPI.php’);<br />
+</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-SoapClient.html"><span>SoapClient</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>TriangleCRM\TriangleAPI</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-TriangleCRM.html">TriangleCRM</a><br>
+		
+
+				<b>Author:</b>
+				egalarza<br>
+		<b>Located at</b> <a href="source-class-TriangleCRM.TriangleAPI.html#11-1218" title="Go to source code">TriangleCRM/TriangleAPI.php</a><br>
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#52-81" title="Go to source code">__construct</a>( )</code>
+
+		<div class="description short">
+			
+<p>Contructor for class TriangleAPI<br />
+Method will gathers config options from config.ini and sets user options from
+config settings section.<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Contructor for class TriangleAPI<br />
+Method will gathers config options from config.ini and sets user options from
+config settings section.<br />
+</p>
+
+
+
+
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-Exception.html">Exception</a></code></code><br>
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__doRequest" id="___doRequest">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___doRequest">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#83-123" title="Go to source code">__doRequest</a>( <span>string <var>$request</var></span>, <span>string <var>$location</var></span>, <span>string <var>$action</var></span>, <span>integer <var>$version</var></span> )</code>
+
+		<div class="description short">
+			
+<p>(PHP 5 &gt;= 5.0.1)<br />
+Performs a SOAP request</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>(PHP 5 &gt;= 5.0.1)<br />
+Performs a SOAP request</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$request</var></dt>
+					<dd><code>string</code><br>$request
+<p>The XML SOAP request.</p>
+</dd>
+					<dt><var>$location</var></dt>
+					<dd><code>string</code><br>$location
+<p>The URL to request.</p>
+</dd>
+					<dt><var>$action</var></dt>
+					<dd><code>string</code><br>$action
+<p>The SOAP action.</p>
+</dd>
+					<dt><var>$version</var></dt>
+					<dd><code>integer</code><br>$version
+<p>The SOAP version.</p>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>The XML SOAP response.<br>
+				</div>
+
+
+				<h4>Link</h4>
+				<div class="list">
+						<a href="http://php.net/manual/en/soapclient.dorequest.php">http://php.net/manual/en/soapclient.dorequest.php</a><br>
+				</div>
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-SoapClient.html#___doRequest">SoapClient::__doRequest()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GetModel" id="_GetModel">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GetModel">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#125-142" title="Go to source code">GetModel</a>( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns Sections of Config.ini file in Array Format<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns Sections of Config.ini file in Array Format<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br><b>$name</b>: name of section inside config.ini<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br>: array(State=&gt;string,Info=&gt;string, Result=&gt;mixedType)<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						
+<p>$api = new TriangleCRM\TriangleAPI();<br />
+$billingModel = $api-&gt;GetModel('Billing');</p>
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CreateProspect" id="_CreateProspect">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CreateProspect">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#144-249" title="Go to source code">CreateProspect</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			Creates new Prospect inside your CRM instance. This function will create a
+customer "prospect" and return a prospect ID that will be used in various other
+function calls.<br />
+CreateProspect is the first call that is made during the steps of a campaign
+funnel,<br />
+and this call is made usually on a landing page.<br />
+<br />
+
+<p><b>Note:</b>If you send campaignID as an additional parameter the call is
+mapped to CreateProspectEx().</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			Creates new Prospect inside your CRM instance. This function will create a
+customer "prospect" and return a prospect ID that will be used in various other
+function calls.<br />
+CreateProspect is the first call that is made during the steps of a campaign
+funnel,<br />
+and this call is made usually on a landing page.<br />
+<br />
+
+<p><b>Note:</b>If you send campaignID as an additional parameter the call is
+mapped to CreateProspectEx().</p>
+
+<p>The CreateProspect function receives shipping information along<br />
+with a ProductTypeID -- an integer that references your product group identifier
+in the CRM.</p>
+
+<p>In order to find your ProductTypeID, you can do the following:<br />
+login to your CRM instance (yourcompany).trianglecrm.com navigate to<br />
+Marketing &gt; Products &amp; Billing &gt; Product Group Manager<br />
+click your Product Group name in the left tree-list on the right pane,<br />
+you should see your Product Group Name along with a Product Type ID at the very
+top</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>
+<p>$params<br />
+string <b>firstName</b> : first name of new prospect<br />
+string <b>lastName</b> : last name of new prospect<br />
+string <b>address1</b> : street address of new prospect<br />
+string <b>address2</b> : additional address info of new prospect<br />
+string <b>city</b> : city of new prospect<br />
+string<b> state</b> : State short abbreviation, usually 2 uppercase letters
+(e.g. TX, CA, IA, …) of new prospect<br />
+string <b>zip</b> : postal code of new prospect<br />
+string <b>country</b> : Country short abbreviation, usually 2 uppercase letters
+(e.g. US, CA) of new prospect<br />
+string <b>phone&gt;</b> : phone number of prospect without any special
+characters<br />
+string <b>email</b> : email of new prospect<br />
+int <b>productTypeID</b> : Project ID in the CRM<br />
+int <b>campaignID</b> : Campaign ID for product<br />
+(Note If Campaign ID is passed the actually Soap Call is mapped to
+CreateProspectEx vs CreateProspect)<br />
+string <b>ip</b> : ip address of remote<br />
+string <b>affiliate</b> : affiliate tracking code<br />
+string <b>subAffiliate</b> : sub affiliate tracking code<br />
+int <b>internalID</b> : customer ID in CRM to charge or credit<br />
+string <b>customField1</b> : custom fields passed into CRM<br />
+string <b>customField2</b> : custom fields passed into CRM<br />
+string <b>customField3</b> : custom fields passed into CRM<br />
+string <b>customField4</b> : custom fields passed into CRM<br />
+string <b>customField5</b> : custom fields passed into CRM<br />
+</p>
+
+<p></p>
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+       'productTypeID' =&gt; {ID_OF_PRODUCT_IN_CRM},<br />
+       'campaignID' =&gt; {IF NOT EMPTY CreateProspectEX is called},<br />
+       'firstName' =&gt; 'unit-test',<br />
+       'lastName' =&gt; 'local',<br />
+       'address1' =&gt; '124 test lane',<br />
+       'address2' =&gt; '',<br />
+       'city' =&gt; '',<br />
+       'state' =&gt; '',<br />
+       'zip' =&gt; '',<br />
+       'country' =&gt; '',<br />
+       'phone' =&gt; '',<br />
+       'email' =&gt; '',<br />
+       'ip' =&gt; '127.0.0.1',<br />
+       'affiliate' =&gt; '',<br />
+       'subAffiliate' =&gt; '',<br />
+       'internalID' =&gt; '',<br />
+       'customField1' =&gt; '',<br />
+       'customField2' =&gt; '',<br />
+       'customField3' =&gt; '',<br />
+       'customField4' =&gt; '',<br />
+       'customField5' =&gt; ''<br />
+);<br />
+$response = $api-&gt;CreateProspect($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result-&gt;ProspectID;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="UpdateShippingInfo" id="_UpdateShippingInfo">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_UpdateShippingInfo">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#251-318" title="Go to source code">UpdateShippingInfo</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Updates the shipping profile for a prospect or customer inside the CRM.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates the shipping profile for a prospect or customer inside the CRM.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params string <b>$firstName</b> : first name of new prospect<br />
+string <b>lastName</b> : last name of new prospect<br />
+string <b>address1</b> : street address of new prospect<br />
+string <b>address2</b> : additional address info of new prospect<br />
+string <b>city</b> : city of new prospect<br />
+string <b>state</b> : State short abbreviation, usually 2 uppercase letters
+(e.g. TX, CA, IA, …) of new prospect<br />
+string <b>zip</b> : postal code of new prospect<br />
+string <b>country</b> : Country short abbreviation, usually 2 uppercase letters
+(e.g. US, CA) of new prospect<br />
+string <b>phone</b> : phone number of prospect without any special characters<br
+/>
+string <b>email</b> : email of new prospect<br />
+int <b>prospectID</b> : Unique int value to identify prospects inside CRM,
+returned from the CreateProspect method<br />
+int <b>internalID</b> = customer ID in CRM to charge or credit<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+       ''prospectID' =&gt; {ID_OF_PROSPECT_OR_CUSTOMER},<br />
+       'firstName' =&gt; {FIRST NAME OF PROSPECT},<br />
+       'lastName' =&gt; {LAST NAME OF PROSPECT},<br />
+       'address1' =&gt; {STREET ADDRESS OF PROSPECT},<br />
+       'address2' =&gt; {2 STREET ADDRESS OF PROSPECT},<br />
+       'city' =&gt; {City OF PROSPECT},<br />
+       'state' =&gt; {STATE OF PROSPECT},<br />
+       'zip' =&gt; {ZIP OF PROSPECT},<br />
+       'country' =&gt; {COUNTRY OF PROSPECT},<br />
+       'phone' =&gt; {TELEPHONE OF PROSPECT},<br />
+       'email' =&gt; {EMAIL OF PROSPECT},<br />
+);<br />
+$response = $api-&gt;UpdateShippingInfo($params);<br />
+echo $response-&gt;State;<br />
+echo "New Prospect ID : ".$response-&gt;Result-&gt;ProspectID;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="IsCreditCardDupe" id="_IsCreditCardDupe">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_IsCreditCardDupe">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#320-369" title="Go to source code">IsCreditCardDupe</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Checks if customer with same credit card exists in the CRM.<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Checks if customer with same credit card exists in the CRM.<br />
+</p>
+
+<p>Applies only to trials within the project or product group.<br />
+"Credit Card Dupe Verification" needs to be enabled in the CRM for this function
+to work.<br />
+<b>Note</b>: Use IsCreditCardUsed() for charge types like authorization, single
+sales and upsells.<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params int <b>creditCard</b> = Credit Card number to valid if has has been
+already used with another account<br />
+int <b>productID</b> = Project ID in the CRM to check if the credit card number
+has been used prior<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$params = array(<br />
+        'creditCard'=&gt;{CREDIT_CARD_NUMBER},<br />
+       'productID' =&gt; {PRODUCT_ID_IN_CRM},<br />
+);<br />
+$response = $api-&gt;IsCreditCardDupe($params);<br />
+echo $response-&gt;State;<br />
+if($response-&gt;Result){<br />
+echo "Response info : ".$response-&gt;Info;<br />
+}<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="FireAffiliatePixel" id="_FireAffiliatePixel">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_FireAffiliatePixel">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#371-422" title="Go to source code">FireAffiliatePixel</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fires pixel code set up under affiliate in the CRM.<br />
+Returns the pixel code that can be placed on the upsell<br />
+or confirmation page to register a sale.<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fires pixel code set up under affiliate in the CRM.<br />
+Returns the pixel code that can be placed on the upsell<br />
+or confirmation page to register a sale.<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params<br />
+string <b>affiliate</b> : affiliate tracking identifier set inside the CRM<br />
+int <b>pageTypeID</b> : represents pages type of campaigns<br />
+         1 = Landing<br />
+         2 = Billing<br />
+         3 = Upsell<br />
+         4 = Confirmation<br />
+int <b>prospectID</b> : Unique int value to identify prospects inside CRM,
+returned from the CreateProspect method<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+     'affiliate' =&gt; {ID_OF_PROSPECT_OR_CUSTOMER},<br />
+     'pageTypeID' =&gt; {Landing =1, Billing = 2, Confirmation = 4},<br />
+     'prospectID' =&gt; {PROSPECT_ID_RETURNED_FROM_CREATEPROSPECT_CALL},<br
+/>
+);<br />
+$response = $api-&gt;FireAffiliatePixel($params);<br />
+echo $response-&gt;State;<br />
+echo "Tracking Pixel has Landed : ".$response-&gt;Result<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Charge" id="_Charge">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Charge">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#424-558" title="Go to source code">Charge</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Debits the cardholder's account<br />
+with amount specified - generally used for single sales and upsells<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Debits the cardholder's account with amount specified - generally used for
+single sales and upsells<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params<br />
+float <b>amount</b> : amount of amount to be charge on given transaction<br />
+float <b>shipping</b> : If Shipping Amount is specified it will be added to
+Amount and charged with same transaction.<br />
+int <b>productTypeID</b> : ID of Product Group to be associated with
+customer.<br />
+Product Groups are configured in CRM.<br />
+If ID of Product Group is not specified ID = 1 will be used by default.<br />
+int <b>productID</b> : ID of Product to be shipped if "Charge" function<br />
+is completed successfully. Products are configured in CRM<br />
+and can contain any number of SKU with quantity.<br />
+If Product ID is not specified no shipment will be placed.<br />
+int <b>campaignID</b> : Campaign ID for product being sold<br />
+bool <b>sendConfirmationEmail</b> : Flag to determine if a confirmation email
+should be sent on successful orders<br />
+string <b>firstName</b> : first name of billing info<br />
+string <b>lastName</b> : last name of billing info<br />
+string <b>address1</b> : street address of billing info<br />
+string <b>address2</b> : additional address info of billing info<br />
+string <b>city</b> : city of billing info<br />
+string <b>state</b> : State short abbreviation, usually 2 uppercase letters
+(e.g. TX, CA, IA, …) of billing info<br />
+string <b>zip</b> : postal code of billing info<br />
+string <b>country</b> : Country short abbreviation, usually 2 uppercase letters
+(e.g. US, CA) of billing info<br />
+string <b>phone</b> : phone number of billing info without any special
+characters<br />
+string <b>email</b> : email of new billing info<br />
+string <b>ip</b> : ip address of remote client/customer<br />
+string <b>affiliate</b> : affiliate tracking code<br />
+string <b>subAffiliate</b> : sub affiliate tracking code<br />
+int <b>internalID</b> : customer ID in CRM to charge or credit<br />
+int <b>prospectID</b> : Unique int value to identify prospects inside CRM,<br />
+returned from the CreateProspect method.<br />
+ID of customer "prospect" that was created by "CreateProspect" function.<br />
+If both "internalID" and "prospectID" are specified system will perform
+validation<br />
+if values match to the same customer: If "internalID" and "prospectID"<br />
+match to different customers system will throw appropriate error.<br />
+If specified "internalID" is not associated with customer in the system<br />
+and "prospectID" doesn’t have "internalID" associated with it system<br />
+will associate "internalID" with "prospectID". Only one of "internalID"<br />
+or "prospectID" is sufficient to associate charge with existing customer.<br />
+int <b>paymentType</b> : interger value that represents the card type/company<br
+/>
+       1 = AMEX, 2 = Visa, 3 = MasterCard, 4 = Discover<br />
+int <b>creditCard</b> : Credit Card number to process the transaction under<br
+/>
+int <b>cvv</b> : Credit card security code of the Credit card used to process
+the transaction<br />
+int <b>expMonth</b> : Expire date month of the Credit Card used to process the
+transaction 1 or 2 digits month number<br />
+int <b>expYear</b> : Expire date year of the Credit Card used to process the
+transaction. 4 digits year<br />
+string <b>description</b> : Description of the charge and information about
+transaction<br />
+string <b>customField1</b> : custom fields passed into CRM<br />
+string <b>customField2</b> : custom fields passed into CRM<br />
+string <b>customField3</b> : custom fields passed into CRM<br />
+string <b>customField4</b> : custom fields passed into CRM<br />
+string <b>customField5</b> : custom fields passed into CRM<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+     'prospectID' =&gt; {PROSPECT_ID_RETURNED_FROM_CREATEPROSPECT_CALL},<br
+/>
+       'sendConfirmationEmail' =&gt; {TRUE OR FALSE},<br />
+       'amount' =&gt; {AMOUNT TO CHARGE},<br />
+       'paymentType' =&gt; {1=AMEX,2=Visa,3=MasterCard,4=Discover},<br />
+       'creditCard' =&gt; {CREDIT CARD NUMBER TO CHARGE},<br />
+       'cvv' =&gt; {CREDIT CARD SECURITY CODE},<br />
+       'expMonth' =&gt; {1 OR 2 DIGITS MONTH NUMBER},<br />
+       'expYear' =&gt; {4 DIGITS YEAR},<br />
+       'productID' =&gt; {PRODUCT ID CHARGE FOR},<br />
+       'campaignID' =&gt; {CAMPAIGN ID},<br />
+       'firstName' =&gt; {FIRST NAME OF PROSPECT},<br />
+       'lastName' =&gt; {LAST NAME OF PROSPECT},<br />
+       'address1' =&gt; {STREET ADDRESS OF PROSPECT},<br />
+       'address2' =&gt; {2 STREET ADDRESS OF PROSPECT},<br />
+       'city' =&gt; {City OF PROSPECT},<br />
+       'state' =&gt; {STATE OF PROSPECT},<br />
+       'zip' =&gt; {ZIP OF PROSPECT},<br />
+       'country' =&gt; {COUNTRY OF PROSPECT},<br />
+       'phone' =&gt; {TELEPHONE OF PROSPECT},<br />
+       'email' =&gt; {EMAIL OF PROSPECT},<br />
+       'ip' =&gt; {REMOTE IP OF CLIENT},<br />
+       'affiliate' =&gt; {AFFILIATE CODE},<br />
+       'subAffiliate' =&gt; {SUB AFFILIATE CODE},<br />
+       'internalID' =&gt;{CUSTOMER ID TO CHARGE},<br />
+       'customField1' =&gt; {CUSTOM FIELD 1},<br />
+       'customField2' =&gt; {CUSTOM FIELD 2},<br />
+       'customField3' =&gt; {CUSTOM FIELD 3},<br />
+       'customField4' =&gt; {CUSTOM FIELD 4},<br />
+       'customField5' =&gt; {CUSTOM FIELD 5}<br />
+);<br />
+$response = $api-&gt;Charge($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ChargeSales" id="_ChargeSales">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ChargeSales">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#560-706" title="Go to source code">ChargeSales</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Runs a charge for the specified product list.<br />
+<br />
+The array should contain Associated Array values<br />
+representing Product Code Items.<br />
+<br />
+The structure of productList<br />
+   $productList = array(<br />
+       'ProductDesc'=&gt;array(<br />
+       'ProductID'=&gt;1,<br />
+       'Amount'=&gt;2.0,<br />
+       'Upsell'=&gt;FAlSE<br />
+));<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Runs a charge for the specified product list.<br />
+The array should contain Associated Array values representing Product Code
+Items.<br />
+<br />
+The structure of productList<br />
+   $productList = array(<br />
+       'ProductDesc'=&gt;array(<br />
+       'ProductID'=&gt;1,<br />
+       'Amount'=&gt;2.0,<br />
+       'Upsell'=&gt;FAlSE<br />
+));<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params<br />
+int <b>productTypeID</b> : ID of Product Group to be associated with
+customer.<br />
+Product Groups are configured in CRM.<br />
+If ID of Product Group is not specified ID = 1 will be used by default.<br />
+array <b>productList</b> : List of IDs of Products to be shipped if
+"ChargeSales" operation is completed successfully.<br />
+Products are configured in CRM and can contain any number of SKU with
+quantity.<br />
+If Product ID is not specified no shipment will be placed.<br />
+<br />
+The structure of productList<br />
+   $productList = array(<br />
+       'ProductDesc'=&gt;array(<br />
+       'ProductID'=&gt;1,<br />
+       'Amount'=&gt;2.0,<br />
+       'Upsell'=&gt;FAlSE<br />
+));<br />
+int <b>campaignID </b>: Campaign ID for product being sold<br />
+bool <b>sendConfirmationEmail </b>: Flag to determine if a confirmation email
+should be sent on successful orders<br />
+string <b>firstName </b>: first name of billing info<br />
+string <b>lastName</b> : last name of billing info<br />
+string <b>address1</b> : street address of billing info<br />
+string <b>address2 </b>: additional address info of billing info<br />
+string <b>city </b>: city of billing info<br />
+string <b>state </b>: State short abbreviation, usually 2 uppercase letters
+(e.g. TX, CA, IA, …) of billing info<br />
+string <b>zip </b>: postal code of billing info<br />
+string <b>country </b>: Country short abbreviation, usually 2 uppercase letters
+(e.g. US, CA) of billing info<br />
+string <b>phone </b>: phone number of billing info without any special
+characters<br />
+string<b> email </b>: email of new billing info<br />
+string <b>ip </b>: ip address of remote client/customer<br />
+string<b> affiliate </b>: affiliate tracking code<br />
+string <b>subAffiliate </b>: sub affiliate tracking code<br />
+int <b>internalID </b>: customer ID in CRM to charge or credit<br />
+int <b>prospectID </b>: Unique int value to identify prospects inside CRM,
+returned from the CreateProspect method.<br />
+ID of customer "prospect" that was created by "CreateProspect" function.<br />
+If both "internalID" and "prospectID" are specified system will perform
+validation if values match to the same customer: If "internalID" and
+"prospectID"<br />
+match to different customers system will throw appropriate error.<br />
+If specified "internalID" is not associated with customer in the system and
+"prospectID" doesn’t have "internalID" associated with it system<br />
+will associate "internalID" with "prospectID". Only one of "internalID"<br />
+or "prospectID" is sufficient to associate charge with existing customer.<br />
+int <b>paymentType</b> : interger value that represents the card type/company<br
+/>
+        1 = AMEX, 2 = Visa, 3 = MasterCard, 4 = Discover<br />
+int <b>creditCard </b>: Credit Card number to process the transaction under<br
+/>
+int <b>cvv</b> : Credit card security code of the Credit card used to process
+the transaction<br />
+int <b>expMonth </b>: Expire date month of the Credit Card used to process the
+transaction<br />
+1 or 2 digits month number<br />
+int <b>expYear</b> : Expire date year of the Credit Card used to process the
+transaction.<br />
+4 digits year<br />
+string <b>customField1 </b>: custom fields passed into CRM<br />
+string <b>customField2 </b>: custom fields passed into CRM<br />
+string <b>customField3</b> : custom fields passed into CRM<br />
+string <b>customField4</b> : custom fields passed into CRM<br />
+string <b>customField5</b> : custom fields passed into CRM<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+     'productTypeID' =&gt; {ID OF PRODUCT GROUP INSIDE CRM},<br />
+     'productList' =&gt; {LIST OF PRODUCT WITH
+(int)PRODUCTID,(float)AMOUNT,(bool)UPSEll},<br />
+       'campaignID' =&gt; {CAMPAIGN ID},<br />
+     'prospectID' =&gt; {PROSPECT_ID_RETURNED_FROM_CREATEPROSPECT_CALL},<br
+/>
+       'sendConfirmationEmail' =&gt; {TRUE OR FALSE},<br />
+       'paymentType' =&gt; {1=AMEX,2=Visa,3=MasterCard,4=Discover},<br />
+       'creditCard' =&gt; {CREDIT CARD NUMBER TO CHARGE},<br />
+       'cvv' =&gt; {CREDIT CARD SECURITY CODE},<br />
+       'expMonth' =&gt; {1 OR 2 DIGITS MONTH NUMBER},<br />
+       'expYear' =&gt; {4 DIGITS YEAR},<br />
+       'productID' =&gt; {PRODUCT ID CHARGE FOR},<br />
+       'firstName' =&gt; {FIRST NAME OF PROSPECT},<br />
+       'lastName' =&gt; {LAST NAME OF PROSPECT},<br />
+       'address1' =&gt; {STREET ADDRESS OF PROSPECT},<br />
+       'address2' =&gt; {2 STREET ADDRESS OF PROSPECT},<br />
+       'city' =&gt; {City OF PROSPECT},<br />
+       'state' =&gt; {STATE OF PROSPECT},<br />
+       'zip' =&gt; {ZIP OF PROSPECT},<br />
+       'country' =&gt; {COUNTRY OF PROSPECT},<br />
+       'phone' =&gt; {TELEPHONE OF PROSPECT},<br />
+       'email' =&gt; {EMAIL OF PROSPECT},<br />
+       'ip' =&gt; {REMOTE IP OF CLIENT},<br />
+       'affiliate' =&gt; {AFFILIATE CODE},<br />
+       'subAffiliate' =&gt; {SUB AFFILIATE CODE},<br />
+       'internalID' =&gt;{CUSTOMER ID TO CHARGE},<br />
+       'customField1' =&gt; {CUSTOM FIELD 1},<br />
+       'customField2' =&gt; {CUSTOM FIELD 2},<br />
+       'customField3' =&gt; {CUSTOM FIELD 3},<br />
+       'customField4' =&gt; {CUSTOM FIELD 4},<br />
+       'customField5' =&gt; {CUSTOM FIELD 5}<br />
+);<br />
+$response = $api-&gt;ChargeSales($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ChargeSalesExistingCustomer" id="_ChargeSalesExistingCustomer">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ChargeSalesExistingCustomer">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#708-780" title="Go to source code">ChargeSalesExistingCustomer</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Runs a charge for an existing customer using existing Billing Profile<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Runs a charge for an existing customer using existing Billing Profile<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params int <b>prospectID </b>: Unique int value to identify prospects inside
+CRM, returned from the CreateProspect method.<br />
+ID of customer "prospect" that was created by "CreateProspect" function.<br />
+If both "internalID" and "prospectID" are specified system will perform
+validation<br />
+if values match to the same customer: If "internalID" and "prospectID" match to
+different customers system will throw appropriate error.<br />
+If specified "internalID" is not associated with customer in the system and
+"prospectID" doesn’t have "internalID" associated with it system<br />
+will associate "internalID" with "prospectID". Only one of "internalID"<br />
+or "prospectID" is sufficient to associate charge with existing customer.<br />
+int<b> productTypeID</b> : ID of Product Group to be associated with
+customer.<br />
+Product Groups are configured in CRM.<br />
+If ID of Product Group is not specified ID = 1 will be used by default.<br />
+array <b>productList</b> : List of IDs of Products to be shipped if
+"ChargeSales" operation is completed successfully.<br />
+Products are configured in CRM and can contain any number of SKU with
+quantity.<br />
+If Product ID is not specified no shipment will be placed.<br />
+<br />
+The structure of productList<br />
+   $productList = array(<br />
+       'ProductDesc'=&gt;array(<br />
+       'ProductID'=&gt;1,<br />
+       'Amount'=&gt;2.0,<br />
+       'Upsell'=&gt;FAlSE<br />
+));<br />
+bool <b>sendConfirmationEmail</b> : Flag to determine if a confirmation email
+should be sent on successful orders<br />
+$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+       'prospectID' =&gt; {ID OF CUSTOMER IN CRM},<br />
+       'productTypeID' =&gt; {ID OF THE PRODUCT TYPE IN CRM},<br />
+       'productList'
+=&gt;array('ProductCodeItem'=&gt;array('ProductID'=&gt;1,'Amount'=&gt;4.00,'Quantity'=&gt;2))<br
+/>
+       'sendConfirmationEmail' =&gt; {TRUE OR FALSE},<br />
+);<br />
+$response = $api-&gt;ChargeSalesExistingCustomer($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result;<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CreateSubscription" id="_CreateSubscription">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CreateSubscription">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#782-910" title="Go to source code">CreateSubscription</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Signs up customer on a recurring plan.Signs up customer on a recurring
+plan.<br />
+TrialPackageID and PlanID from CRM need to be passed to charge the customer and
+ship products if applicable.<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Signs up customer on a recurring plan.Signs up customer on a recurring
+plan.<br />
+TrialPackageID and PlanID from CRM need to be passed to charge the customer and
+ship products if applicable.<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params<br />
+int <b>planID</b> : ID of subscription plan to put customer on.<br />
+Subscription Plans are configured in CRM and can be used for recurring
+charges.<br />
+int <b>trialPackageID</b> : Trial package set inside the CRM<br />
+bool <b>chargeForTrial</b> : Boolean option to specify whether the customer
+should be charged for trial price.<br />
+If set to "true" function will charge customer immediately and place shipment
+according to subscription settings.<br />
+Trial prices and products for subscription plans are configured in CRM.<br />
+Function will not put the customer on subscription plan if "chargeForTrial"
+option is set to "true" and charge is failed for trial price.<br />
+int <b>campaignID</b> : Campaign ID for product being sold<br />
+string <b>firstName</b> : first name of billing info<br />
+string <b>lastName</b> : last name of billing info<br />
+string <b>address1</b> : street address of billing info<br />
+string <b>address2</b> : additional address info of billing info<br />
+string <b>city</b> : city of billing info<br />
+string <b>state</b> : State short abbreviation, usually 2 uppercase letters
+(e.g. TX, CA, IA, …) of billing info<br />
+string <b>zip</b> : postal code of billing info<br />
+string <b>country</b> : Country short abbreviation, usually 2 uppercase letters
+(e.g. US, CA) of billing info<br />
+string <b>phone</b> : phone number of billing info without any special
+characters<br />
+string <b>email</b> : email of new billing info<br />
+bool <b>sendConfirmationEmail</b> : Flag to determine if a confirmation email<br
+/>
+string <b>ip</b> : ip address of remote client/customer<br />
+string <b>affiliate</b> : affiliate tracking code<br />
+string <b>subAffiliate</b> : sub affiliate tracking code<br />
+int <b>internalID</b> : customer ID in CRM to charge or credit<br />
+int <b>prospectID</b> : Unique int value to identify prospects inside CRM,
+returned from the CreateProspect method.<br />
+ID of customer "prospect" that was created by "CreateProspect" function.<br />
+If both "internalID" and "prospectID" are specified system will perform
+validation<br />
+if values match to the same customer: If "internalID" and "prospectID"<br />
+match to different customers system will throw appropriate error.<br />
+If specified "internalID" is not associated with customer in the system and
+"prospectID" doesn’t have "internalID" associated with it system<br />
+will associate "internalID" with "prospectID". Only one of "internalID"<br />
+or "prospectID" is sufficient to associate charge with existing customer.<br />
+int <b>paymentType</b> : interger value that represents the card type/company<br
+/>
+       1 = AMEX, 2 = Visa, 3 = MasterCard, 4 = Discover<br />
+int <b>creditCard</b> : Credit Card number to process the transaction under<br
+/>
+int <b>cvv</b> : Credit card security code of the Credit card used to process
+the transaction<br />
+int <b>expMonth </b>: Expire date month of the Credit Card used to process the
+transaction 1 or 2 digits month number<br />
+int <b>expYear</b> : Expire date year of the Credit Card used to process the
+transaction. 4 digits year<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						* $api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+       'planID' =&gt; {ID OF Subscription Plan IN CRM},<br />
+       'trialPackageID' =&gt; {ID OF Trial Plan IN CRM},<br />
+       'chargeForTrial' =&gt; {TRUE OR FALSE IF Charge IS A Trial},<br />
+       'campaignID' =&gt; {CAMPAIGN ID},<br />
+       'firstName' =&gt; {FIRST NAME OF PROSPECT},<br />
+       'lastName' =&gt; {LAST NAME OF PROSPECT},<br />
+       'address1' =&gt; {STREET ADDRESS OF PROSPECT},<br />
+       'address2' =&gt; {2 STREET ADDRESS OF PROSPECT},<br />
+       'city' =&gt; {City OF PROSPECT},<br />
+       'state' =&gt; {STATE OF PROSPECT},<br />
+       'zip' =&gt; {ZIP OF PROSPECT},<br />
+       'country' =&gt; {COUNTRY OF PROSPECT},<br />
+       'phone' =&gt; {TELEPHONE OF PROSPECT},<br />
+       'email' =&gt; {EMAIL OF PROSPECT},<br />
+       'ip' =&gt; {REMOTE IP OF CLIENT},<br />
+       'sendConfirmationEmail' =&gt; {TRUE OR FALSE},<br />
+       'prospectID' =&gt; {ID OF CUSTOMER IN CRM},<br />
+       'description' =&gt; {DESCRIPTION OF Charge to APPEAR in CRM },<br />
+       'affiliate' =&gt; {AFFILIATE CODE},<br />
+       'subAffiliate' =&gt; {SUB AFFILIATE CODE},<br />
+       'internalID' =&gt;{CUSTOMER ID TO CHARGE},<br />
+       'customField1' =&gt; {CUSTOM FIELD 1},<br />
+       'customField2' =&gt; {CUSTOM FIELD 2},<br />
+       'customField3' =&gt; {CUSTOM FIELD 3},<br />
+       'customField4' =&gt; {CUSTOM FIELD 4},<br />
+       'customField5' =&gt; {CUSTOM FIELD 5}<br />
+);<br />
+$response = $api-&gt;CreateSubscription($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CreateNewSubscriptionExistingCustomer" id="_CreateNewSubscriptionExistingCustomer">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CreateNewSubscriptionExistingCustomer">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#912-985" title="Go to source code">CreateNewSubscriptionExistingCustomer</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new subscription plan an existing customer in the CRM.<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new subscription plan an existing customer in the CRM.<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params<br />
+int <b>prospectID</b> : Unique int value to identify prospects inside CRM,
+returned from the CreateProspect method.<br />
+ID of customer "prospect" that was created by "CreateProspect" function.<br />
+If both "internalID" and "prospectID" are specified system will perform
+validation<br />
+if values match to the same customer: If "internalID" and "prospectID"<br />
+match to different customers system will throw appropriate error.<br />
+If specified "internalID" is not associated with customer in the system<br />
+and "prospectID" doesn’t have "internalID" associated with it system<br />
+will associate "internalID" with "prospectID". Only one of "internalID"<br />
+or "prospectID" is sufficient to associate charge with existing customer.<br />
+int <b>billingID</b> : Unique int value to identify billing plans to
+accounts.<br />
+This value can be found on the Customer Profile page in CRM.<br />
+int <b>planID</b> : ID of subscription plan to put customer on.<br />
+Subscription Plans are configured in CRM and can be used for recurring
+charges.<br />
+int <b>trialPackageID</b> : Unique int value of the trial package being
+ordered.<br />
+bool <b>chargeForTrial</b> : Boolean option to specify whether the customer
+should be charged for trial price.<br />
+If set to "true" function will charge customer immediately and place shipment
+according to subscription settings.<br />
+Trial prices and products for subscription plans are configured in CRM.<br />
+Function will not put the customer on subscription plan if "chargeForTrial"
+option is set<br />
+to "true" and charge is failed for trial price.<br />
+bool <b>sendConfirmationEmail</b> : Flag to determine if a confirmation email
+should be sent on successful order<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+       'prospectID' =&gt; {PROSPECT OR CUSTOMER ID IN CRM},<br />
+       'billingID' =&gt; {BILLING PROFILE IN CRM TO CHARGE},<br />
+       'planID' =&gt; {PLAN UNIQUE ID IN THE CRM},<br />
+       'trialPackageID' =&gt; {TRIAL PLAN UNIQUE ID IN THE CRM},<br />
+       'chargeForTrial' =&gt; {TRUE OR FALSE IF CHARGE SHOULD BE RAN AS A
+TRIAL},<br />
+       'sendConfirmationEmail' =&gt; {TRUE OR FALSE IF EMAIL SHOULD BE SENT
+ON SUCCESS}<br />
+);<br />
+$response = $api-&gt;CreateNewSubscriptionExistingCustomer($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="GetCustomerDetail" id="_GetCustomerDetail">
+
+		<td class="attributes"><code>
+			 public 
+			object
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_GetCustomerDetail">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#987-1041" title="Go to source code">GetCustomerDetail</a>( <span>array <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns customer's shipping and billing information and charge history for a
+prospect.<br />
+For example, this function can be used when you wish to call prospects via
+customer service or dialer.<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns customer's shipping and billing information and charge history for a
+prospect.<br />
+For example, this function can be used when you wish to call prospects via
+customer service or dialer.<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd><code>array</code><br>$params<br />
+string <b>phoneNumber</b> : Telephone number of customer<br />
+int <b>prospectID</b> : Unique int value to identify prospects inside CRM,
+returned from the CreateProspect method.<br />
+ID of customer "prospect" that was created by "CreateProspect" function.<br />
+If both "internalID" and "prospectID" are specified system will perform
+validation<br />
+if values match to the same customer: If "internalID" and "prospectID"<br />
+match to different customers system will throw appropriate error.<br />
+If specified "internalID" is not associated with customer in the system<br />
+and "prospectID" doesn’t have "internalID" associated with it system<br />
+will associate "internalID" with "prospectID". Only one of "internalID"<br />
+or "prospectID" is sufficient to associate charge with existing customer.<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>object</code><br>: (string)$response-&gt;State, (string)$response-&gt;Info,
+(mixtype)$response-&gt;Result<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI();<br />
+$params = array(<br />
+       'phoneNumber' =&gt; {TELEPHONE_CUSTOMER},<br />
+       'prospectID' =&gt; {PROSPECT OR CUSTOMER ID IN CRM},<br />
+);<br />
+$response = $api-&gt;GetCustomerDetail($params);<br />
+echo $response-&gt;State;<br />
+echo $response-&gt;Result;<br />
+<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="MapPaymentTypeValue" id="_MapPaymentTypeValue">
+
+		<td class="attributes"><code>
+			 protected 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_MapPaymentTypeValue">#</a>
+		<code><a href="source-class-TriangleCRM.TriangleAPI.html#1042-1076" title="Go to source code">MapPaymentTypeValue</a>( <span>string <var>$type</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Maps Interger value to actually Card provider<br />
+</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Maps Interger value to actually Card provider<br />
+</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>string</code><br>$type<br />
+Interger value of Credit Card Payment Company<br />
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>$res<br>
+				</div>
+
+
+				<h4>Example</h4>
+				<div class="list">
+						$api = new TriangleCRM\TriangleAPI(); $val = $api-&gt;MapPaymentTypeValue(1);
+print $val;//American Express<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-SoapClient.html#methods">SoapClient</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-SoapClient.html#_SoapClient">SoapClient()</a>, 
+			<a href="class-SoapClient.html#___call">__call()</a>, 
+			<a href="class-SoapClient.html#___getFunctions">__getFunctions()</a>, 
+			<a href="class-SoapClient.html#___getLastRequest">__getLastRequest()</a>, 
+			<a href="class-SoapClient.html#___getLastRequestHeaders">__getLastRequestHeaders()</a>, 
+			<a href="class-SoapClient.html#___getLastResponse">__getLastResponse()</a>, 
+			<a href="class-SoapClient.html#___getLastResponseHeaders">__getLastResponseHeaders()</a>, 
+			<a href="class-SoapClient.html#___getTypes">__getTypes()</a>, 
+			<a href="class-SoapClient.html#___setCookie">__setCookie()</a>, 
+			<a href="class-SoapClient.html#___setLocation">__setLocation()</a>, 
+			<a href="class-SoapClient.html#___setSoapHeaders">__setSoapHeaders()</a>, 
+			<a href="class-SoapClient.html#___soapCall">__soapCall()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="configOptions" id="$configOptions">
+		<td class="attributes"><code>
+			public  
+			array
+		</code></td>
+
+		<td class="name">
+				<a href="source-class-TriangleCRM.TriangleAPI.html#38-43" title="Go to source code"><var>$configOptions</var></a>
+		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$configOptions" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Options parsed and returned from Config.ini file<br />
+Sections are defined in Associated Arrays<br />
+</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Options parsed and returned from Config.ini file<br />
+Sections are defined in Associated Arrays<br />
+</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		trianglecrm-php-sdk API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
