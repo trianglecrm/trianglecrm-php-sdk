@@ -14,13 +14,14 @@ USERNAME = ‘YOUR_API_NAME’
 PASSWORD = ‘YOUR_API_PASSWORD’
 DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'
 ```
-3.  Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the     TriangleCRM API 
->>		EX.
->>		include(‘/TriangleCRM/TriangleAPI.php’);
->>		or
->>		include_once(‘/TriangleCRM/TriangleAPI.php’);
+3.  Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API 
+```
+		EX.
+		include(‘/TriangleCRM/TriangleAPI.php’);
+		or
+		include_once(‘/TriangleCRM/TriangleAPI.php’);
 		
-
+```
 
 Creating your first API Call-
 
@@ -76,22 +77,25 @@ Each method call takes a number of required and optional parameters to complete 
             );
 ```
 
-The last line is the actually soap request to your CRM instance. In our example we are calling IsCreditCardDupe with the parameters contained inside the $params array.
+The last line is the actually soap request to your CRM instance. 
+In our example we are calling IsCreditCardDupe with the parameters contained inside the $params array.
 
 ```php
-	$result = $api->IsCreditCardDupe($params);
+$result = $api->IsCreditCardDupe($params);
 ```
+
 Each response from the api is returned inside an PHP Object with three properties (State, Info, and Result ).
 
-	State defines the status of the request operation to the server. The possible values are  Success or Error.
+>><b>State</b> defines the status of the request operation to the server. The possible values are  Success or Error.
 
-	Info is a string message giving more information on the api operation. 
+>><b>Info</b> is a string message giving more information on the api operation. 
 	
-	Result is the actual payload of data returned from the request.
+>><b>Result</b> is the actual payload of data returned from the request.
+
 
 ```php	
-print( $result->State);
-print ( $result->Info);
-print ( $result->Result);
+<b>print</b>( $result->State);
+<b>print</b> ( $result->Info);
+<b>print</b> ( $result->Result);
 ```
 
