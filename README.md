@@ -1,13 +1,14 @@
 trianglecrm-php-sdk
 ===================
 
-Getting started
+#Getting started
 
-Download and add the TriangleCRM folder into your project.
-Update the config file at TriangleCRM/config.ini Settings section 
+1. Download and add the TriangleCRM folder into your project.
+
+2.Update the config file at TriangleCRM/config.ini Settings section 
 		
->>Values: 
->>[Settings]
+>Values: 
+>[Settings]
 
 ```
 USERNAME = ‘YOUR_API_NAME’
@@ -15,15 +16,10 @@ PASSWORD = ‘YOUR_API_PASSWORD’
 DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'
 ```
 3.  Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API 
-```
-		EX.
-		include(‘/TriangleCRM/TriangleAPI.php’);
-		or
-		include_once(‘/TriangleCRM/TriangleAPI.php’);
-		
-```
+--EX. ```include(‘/TriangleCRM/TriangleAPI.php’);``` or	```include_once(‘/TriangleCRM/TriangleAPI.php’);```
 
-Creating your first API Call-
+
+#Creating your first API Call-
 
 Class TriangleAPI inherits from PHP SoapClient class and allows calling your API for seamless CRM integration. 
 
@@ -86,7 +82,8 @@ In our example we are calling IsCreditCardDupe with the parameters contained ins
 
 Each response from the api is returned inside an PHP Object with three properties (State, Info, and Result ).
 
-><b>State</b> defines the status of the request operation to the server. The possible values are  Success or Error.
+><b>State</b> defines the status of the request operation to the server. 
+The possible values are Success or Error.
 
 ><b>Info</b> is a string message giving more information on the api operation. 
 	
