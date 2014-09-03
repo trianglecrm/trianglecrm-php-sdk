@@ -5,16 +5,20 @@ Getting started
 
 Download and add the TriangleCRM folder into your project.
 Update the config file at TriangleCRM/config.ini Settings section 
-		Values: 
-[Settings]
+		
+>>Values: 
+>>[Settings]
+
+```
 USERNAME = ‘YOUR_API_NAME’
 PASSWORD = ‘YOUR_API_PASSWORD’
 DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'
-   3.  Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the     TriangleCRM API 
-		EX.
-		include(‘/TriangleCRM/TriangleAPI.php’);
-		or
-		include_once(‘/TriangleCRM/TriangleAPI.php’);
+```
+3.  Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the     TriangleCRM API 
+>>		EX.
+>>		include(‘/TriangleCRM/TriangleAPI.php’);
+>>		or
+>>		include_once(‘/TriangleCRM/TriangleAPI.php’);
 		
 
 
