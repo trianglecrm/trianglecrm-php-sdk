@@ -9,18 +9,15 @@ This SDK maps current CRM SOAP API calls for integrating with Triangle CRM clien
 #Getting started
 1. Download and add the TriangleCRM folder into your project.
 
-2. Update the config file at TriangleCRM/config.ini Settings section 
+2. Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API from.
+
+3. Update the config file at TriangleCRM/config.ini Settings section 
 ```
 [Settings]
 USERNAME = ‘YOUR_API_NAME’
 PASSWORD = ‘YOUR_API_PASSWORD’
 DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'
 ```
-
-1. Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API from.
-
- ```require(‘/TriangleCRM/TriangleAPI.php’);``` 
-
 
 
 #Creating your first API Call-
