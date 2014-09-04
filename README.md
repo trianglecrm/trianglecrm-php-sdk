@@ -2,21 +2,21 @@ trianglecrm-php-sdk
 ===================
 
 #Getting started
-
 1. Download and add the TriangleCRM folder into your project.
 
-2.Update the config file at TriangleCRM/config.ini Settings section 
+2. Update the config file at TriangleCRM/config.ini Settings section 
 		
->Values: 
->[Settings]
+- Values: 
 
 ```
+[Settings]
 USERNAME = ‘YOUR_API_NAME’
 PASSWORD = ‘YOUR_API_PASSWORD’
 DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'
 ```
-3.  Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API 
---EX. ```include(‘/TriangleCRM/TriangleAPI.php’);``` or	```include_once(‘/TriangleCRM/TriangleAPI.php’);```
+3. Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API from.
+
+- EX. ```include(‘/TriangleCRM/TriangleAPI.php’);``` or	```include_once(‘/TriangleCRM/TriangleAPI.php’);```
 
 
 #Creating your first API Call-
@@ -27,31 +27,29 @@ For example :
 
 ```php
 
-include (‘/TriangleCRM/TriangleAPI.php’);
+    include (‘/TriangleCRM/TriangleAPI.php’);
+    use TriangleCRM\TriangleAPI as api;
 
-use TriangleCRM\TriangleAPI as api;
+    $api = new api();
 
-$api = new api();
-
- $params = array(
-               'creditCard'=>'4124241111111111',
-                'productID'=>1
-            );
+    $params = array(
+            'creditCard'=>'4124241111111111',
+            'productID'=>1
+         );
         
-  $result = $api->IsCreditCardDupe($params);
+    $result = $api->IsCreditCardDupe($params);
 
 ```
 
 Lets review line by line, we begin by including the TriangleCRM.php class.
 
 ```php
-	include (‘/TriangleCRM/TriangleAPI.php’);
+    include (‘/TriangleCRM/TriangleAPI.php’);
 ```
 Than we apply an alias but this is not required. Its simply to allow us to refer the class without having to worry about using the namespace. 
 
 ```php
-
-use TriangleCRM\TriangleAPI as api;
+    use TriangleCRM\TriangleAPI as api;
 
 ```
 
@@ -59,9 +57,9 @@ Next we create an instance of our api class so we can make calls to your CRM ins
 In our example we are using an alias so the class name is actually api instead of TriangleCRM\TriangleAPI without an alias applied.
 
 ```php
-	$api = new api();//alias
+    $api = new api();//alias
 
-	$api = new TriangleCRM\TriangleAPI(); //without
+    $api = new TriangleCRM\TriangleAPI(); //without
 ```
 The next three lines define the parameters we will be passing into the soap request.
 Each method call takes a number of required and optional parameters to complete the soap request.
@@ -77,7 +75,7 @@ The last line is the actually soap request to your CRM instance.
 In our example we are calling IsCreditCardDupe with the parameters contained inside the $params array.
 
 ```php
-	$result = $api->IsCreditCardDupe($params);
+    $result = $api->IsCreditCardDupe($params);
 ```
 
 Each response from the api is returned inside an PHP Object with three properties (State, Info, and Result ).
@@ -92,7 +90,7 @@ The possible values are Success or Error.
 
 ```php	
     print( $result->State);
-    print ( $result->Info);
+    print( $result->Info);
     print( $result->Result);
 ```
 
