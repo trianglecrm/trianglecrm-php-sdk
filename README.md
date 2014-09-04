@@ -1,6 +1,6 @@
 trianglecrm-php-sdk
 ===================
-Track prospects,customers,sales,visitors and much more directly in your CRM instance.
+Track prospects, customers, sales, visitors and much more directly in your CRM instance.
 
 The purpose of this SDK is to allow for clients using PHP to directly update there CRM instance.
 This SDK maps current CRM SOAP API calls for integrating with Triangle CRM clients API.
@@ -17,12 +17,9 @@ PASSWORD = ‘YOUR_API_PASSWORD’
 DOMAIN = 'YOUR_TRIANGLE_CRM_DOMAIN'
 ```
 
-3. Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API from.
+1. Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API from.
 
--Ex.		
  ```require(‘/TriangleCRM/TriangleAPI.php’);``` 
-or	
-```include_once(‘/TriangleCRM/TriangleAPI.php’);```
 
 
 
