@@ -1,4 +1,4 @@
-trianglecrm-php-sdk
+Triangle CRM PHP SDK
 ===================
 Track prospects, customers, sales, visitors and much more directly in your CRM instance.
 
