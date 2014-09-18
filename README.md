@@ -1,10 +1,7 @@
-trianglecrm-php-sdk
+Triangle CRM PHP SDK
 ===================
-Track prospects, customers, sales, visitors and much more directly in your CRM instance.
 
-The purpose of this SDK is to allow for clients using PHP to directly update there CRM instance.
-This SDK maps current CRM SOAP API calls for integrating with Triangle CRM clients API.
-
+The Triangle CRM PHP SDK makes it easy to integrate your marketing sites with Triangle CRM.  Easily create prospects, process order, and utilize Triangle's helper methods to easily (and correctly) integrate without worrying about properly formatting API requests and responses.
 
 #Getting started
 1. Download and add the TriangleCRM folder into your project.
