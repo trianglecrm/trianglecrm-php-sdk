@@ -12,6 +12,7 @@ This SDK maps current CRM SOAP API calls for integrating with Triangle CRM clien
 2. Include php file TriangleCRM/TriangleAPI.php inside the file you will be calling the TriangleCRM API from.
 
 3. Update the config file at TriangleCRM/config.ini Settings section 
+
 ```
 [Settings]
 USERNAME = ‘YOUR_API_NAME’
@@ -120,10 +121,10 @@ The corresponding API calls to accomplish the flow list above.
 > CreateProspect -\> CreateSubscription -\> Charge
 
 The first call is the ```CreateProspect``` to create the account in the CRM.
-This method returns the prospectID created in the CRM.
+This method returns the ```prospectID``` created in the CRM.
 
 
--Example ```CreateProspect```
+####Example ```CreateProspect```
 
 ```php
 
@@ -156,12 +157,11 @@ This method returns the prospectID created in the CRM.
         $result = $a->CreateProspect($params);
         $prospectID = $result->State === "Success" ? $result->Result->ProspectID: NULL;
 
-
 ```
 
 The next call is ```CreateSubscription``` which will set up the recurring plan and process the transaction based on the project settings in the CRM.
 
--Example ```CreateSubscription```
+####Example ```CreateSubscription```
 
 ```php
 
@@ -209,7 +209,8 @@ The next call is ```CreateSubscription``` which will set up the recurring plan a
 The final call is the ```Charge``` method which will process an Upsell. 
 This is an optional step that allows for an additional offer to be sold.
 
--Example ```Charge```
+
+####Example ```Charge```
 
 ```php
 
@@ -252,4 +253,49 @@ This is an optional step that allows for an additional offer to be sold.
          print($result->Info);
 
 ```
+
+#Function descriptions:
+
+### CreateProspect : 
+
+> This method will create a customer "prospect" and return a prospect ID that will be used in various other function calls. CreateProspect is the first call that is made during the steps of a campaign funnel, and this call is made usually on a landing page.
+```Note:```  Use CreateProspectEx() if you want to send campaignID as an additional parameter.
+The CreateProspect function receives shipping information along with a ProductTypeID -- an integer that references your project identifier in the CRM.
+
+### UpdateShippingInfo : 
+
+>Updates the shipping profile for a prospect or customer. 
+
+### FireAffiliatePixel : 
+
+> Fires pixel code set up under affiliate in the CRM.  Returns the pixel code that can be placed on the upsell or confirmation page to register a sale.
+
+### Charge : 
+
+> Debits the cardholder's account with amount specified - generally used for single sales and upsells.
+
+### ChargeSales : 
+
+> Runs a charge for the specified product list.
+
+### ChargeSalesExistingCustomer : 
+
+> Runs a charge for an existing customer using existing Billing Profile
+
+### CreateSubscription :  
+
+> Signs up customer on a recurring plan.Signs up customer on a recurring plan. TrialPackageID and PlanID from CRM need to be passed to charge the customer and ship products if applicable.
+
+
+### CreateNewSubscriptionExistingCustomer : 
+
+> Creates a new subscription plan an existing customer in the CRM.
+
+### GetCustomerDetail : 
+
+> Returns customer's shipping and billing information and charge history for a prospect. For example, this function can be used when you wish to call prospects via customer service or dialer.
+
+### IsCreditCardDupe : 
+
+> Checks if customer with same credit card exists in the CRM.
 
