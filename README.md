@@ -114,7 +114,7 @@ Most campaigns funnels work in similar manners.
 
 The corresponding API calls to accomplish the flow list above.
 
--Typical API method call flow
+Typical API method call flow
 > CreateProspect -\> CreateSubscription -\> Charge
 
 The first call is the ```CreateProspect``` to create the account in the CRM.
@@ -255,8 +255,8 @@ This is an optional step that allows for an additional offer to be sold.
 
 ### CreateProspect : 
 
-> This method will create a customer "prospect" and return a prospect ID that will be used in various other function calls. CreateProspect is the first call that is made during the steps of a campaign funnel, and this call is made usually on a landing page.
-```Note:```  Use CreateProspectEx() if you want to send campaignID as an additional parameter.
+> This method will create a customer "prospect" and return a prospect ID that will be used in various other function calls. 
+CreateProspect is the first call that is made during the steps of a campaign funnel, and this call is made usually on a landing page.
 The CreateProspect function receives shipping information along with a ProductTypeID -- an integer that references your project identifier in the CRM.
 
 ### UpdateShippingInfo : 
