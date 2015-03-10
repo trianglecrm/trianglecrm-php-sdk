@@ -367,6 +367,55 @@ class TriangleAPI extends \SoapClient {
         }
         return $result;
     }
+    
+    /**
+     * Checks if customer with same credit card is beign used in the CRM.<br/>  
+     * 
+     * <p>
+     *  Checks if credit card exists on record for productID in the CRM.  <br/>
+     * </p>
+     * 
+     * @param array $params
+     * 
+     * int <b>creditCard</b> = Credit Card number to valid if has has 
+     *  been already used with another account<br/>
+     * 
+     * int <b>productID</b> =  Project ID in the CRM to check if the 
+     *  credit card number has been used prior <br/>
+     * 
+     * @example 
+     * 
+     *    $params = array(<br/>
+     *&nbsp; &nbsp; &nbsp; &nbsp; 'creditCard'=>{CREDIT_CARD_NUMBER},<br/>
+     *&nbsp; &nbsp; &nbsp; &nbsp;'productID' => {PRODUCT_ID_IN_CRM},<br/>
+     * 
+     *       );
+     * <br/>
+     * 
+     * $response = $api->IsCreditCardDupe($params);<br/>
+     * echo $response->State;<br/>
+     * if($response->Result){<br/>
+     *      echo "Response info : ".$response->Info;<br/>
+     * }
+     * <br/>
+     * 
+     * @return object : (string)$response->State, (string)$response->Info, (mixtype)$response->Result
+     */
+    public function IsCreditCardUsed($params) {
+        $result = NULL;
+        $isValid = $this->Validate($params);
+
+        if (empty($isValid)) {
+
+            $returnType = $this->GetResult(__FUNCTION__);
+            $obj = parent::__soapCall(__FUNCTION__, array((array) $params));
+            $result = $this->ParseResponse($obj->$returnType, true);
+        } else {
+
+            $result = (object) array('State' => 'Error', 'Info' => $isValid, 'Result' => $isValid);
+        }
+        return $result;
+    }
 
     /**
      * Fires pixel code set up under affiliate in the CRM.<br/>
@@ -1039,6 +1088,98 @@ class TriangleAPI extends \SoapClient {
 
         return $result;
     }
+    
+    /**
+     * Returns detailed product and charge history for a given sale ID.<br/>
+     * For example, this function can be used when you wish to call get information from a charge giving the saleID.<br/>
+     * 
+     * @param array $params<br/>
+     * 
+     * int <b>saleID</b> : ID of "Charge" transaction <br/>
+     * 
+     * @example
+     * 
+     * $api = new TriangleCRM\TriangleAPI();
+     * <br/>
+     *    $params = array(<br/>
+     * 
+     *&nbsp; &nbsp; &nbsp; &nbsp;'saleID' => {ID of "Charge" transaction},<br/> 
+     * 
+     *       );
+     * <br/>
+     * 
+     * 
+     * $response = $api->GetSaleInfo($params);<br/>
+     * echo $response->State;<br/>
+     * echo $response->Result;<br/> 
+     * 
+     * @return object : (string)$response->State, (string)$response->Info, (mixtype)$response->Result
+     */
+    public function GetSaleInfo($params) {
+        $result = NULL;
+        $params = array_merge($this->credInfo, (array) $params);
+        $isValid = $this->Validate($params);
+
+        if (empty($isValid)) {
+
+            $returnType = $this->GetResult(__FUNCTION__);
+            $obj = parent::__soapCall(__FUNCTION__, array((array) $params));
+            $result = $this->ParseResponse($obj->$returnType, true);
+        } else {
+
+            $result = (object) array('State' => 'Error', 'Info' => $isValid, 'Result' => $isValid);
+        }
+        return $result;
+    }
+    
+    /**
+     * Cancels a subscription.<br/>
+     * For example, this function can be used when you want to cancel a subscription.<br/>
+     * 
+     * @param array $params<br/>
+     * 
+     * int <b>billingID</b> : Unique int value to identify billing plans to customers accounts.(Required) <br/>
+     * string <b>phone</b> : Phone number of prospect without any special characters <br/>
+     * string <b>email</b> : Email of prospect <br/>
+     * 
+     * @example
+     * 
+     * $api = new TriangleCRM\TriangleAPI();
+     * <br/>
+     *    $params = array(<br/>
+     * 
+     *&nbsp; &nbsp; &nbsp; &nbsp;'billingID' => {Unique int value to identify billing plans to customers accounts.(Required)},<br/> 
+     *&nbsp; &nbsp; &nbsp; &nbsp;'phone' => {Phone number of prospect without any special characters},<br/> 
+     *&nbsp; &nbsp; &nbsp; &nbsp;'email' => {Email of prospect},<br/> 
+     * 
+     *       );
+     * <br/>
+     * 
+     * 
+     * $response = $api->CancelSubscription($params);<br/>
+     * echo $response->State;<br/>
+     * echo $response->Result;<br/> 
+     * 
+     * @return object : (string)$response->State, (string)$response->Info, (mixtype)$response->Result
+     */
+    public function CancelSubscription($params) {
+        $result = NULL;
+        $params = array_merge($this->credInfo, (array) $params);
+        $isValid = $this->Validate($params);
+
+        if (empty($isValid)) {
+
+            $returnType = $this->GetResult(__FUNCTION__);
+            $obj = parent::__soapCall(__FUNCTION__, array((array) $params));
+            $result = $this->ParseResponse($obj->$returnType, true);
+        } else {
+
+            $result = (object) array('State' => 'Error', 'Info' => $isValid, 'Result' => $isValid);
+        }
+        return $result;
+    }
+
+    
     /**
      * Maps Interger value to actually Card provider<br/>
      * 
