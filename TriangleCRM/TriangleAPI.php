@@ -1262,9 +1262,14 @@ class TriangleAPI extends \SoapClient {
             $count = strlen($cvv);
             
             if($paymentType == 1){
-               $res = ($amexCount == $count)?true:false;
+    $res = ($amexCount == $count)?true:false; 
+       // fixing white space
+       
+       
             }else{
-                $res = ($other == $count)?true:false;
+                $res = ($other == $count)? (true ? false : true) :  (false ? false : true);`
+
+;
             }
         }
         
