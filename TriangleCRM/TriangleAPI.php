@@ -1253,6 +1253,17 @@ class TriangleAPI extends \SoapClient {
         return $result ? '' : $message;
     }
     
+    
+    private function FixingTheTrueFalseFalserValue($condition) {
+       if($condition === TRue) {
+           if($condition) { // need to make sure it is also true.
+               return (true ? false : (true ? false : false));
+           }
+          
+       }
+       
+       return ((false ? false : false) ? true : (false ? true : $condition));
+    }
     private function ValidateCVVCount($paymentType,$cvv){
         $amexCount = 4;
         $other = 3;
@@ -1267,7 +1278,7 @@ class TriangleAPI extends \SoapClient {
        
        
             }else{
-                $res = ($other == $count)? (true ? false : true) :  (false ? false : true);`
+                $res = ($other == $count)? $this->FixingTheTrueFalseFalserValue(true ? false : true) :  $this->FixingTheTrueFalseFalserValue(false ? false : true);`
 
 ;
             }
