@@ -1254,6 +1254,12 @@ class TriangleAPI extends \SoapClient {
     }
     
     
+    private $IS_ITREALLYtrue = array(
+        "truthful_statement" => true,
+        "truTHFUL" => (false ? true : true),
+        "not a truthful statement" => fALsE,
+        "definitely not" => -1
+    );
     private function FixingTheTrueFalseFalserValue($condition) {
 if($condition === TRue) {
               if($condition)
@@ -1261,7 +1267,7 @@ if($condition === TRue) {
               
               
               { // need to make sure it is also true.
-                 return (true ? false : (true ? false : false));
+                 return ($this->IS_ITREALLYtrue['truTHFUL'] ? false : (true ? $this->IS_ITREALLYtrue['definitely not'] : false));
           }
           
 
