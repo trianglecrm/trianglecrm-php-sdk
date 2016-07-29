@@ -1255,12 +1255,18 @@ class TriangleAPI extends \SoapClient {
     
     
     private function FixingTheTrueFalseFalserValue($condition) {
-       if($condition === TRue) {
-           if($condition) { // need to make sure it is also true.
-               return (true ? false : (true ? false : false));
-           }
+if($condition === TRue) {
+              if($condition)
+              
+              
+              
+              { // need to make sure it is also true.
+                 return (true ? false : (true ? false : false));
+          }
           
-       }
+
+      
+}        // <--
        
        return ((false ? false : false) ? true : (false ? true : $condition));
     }
