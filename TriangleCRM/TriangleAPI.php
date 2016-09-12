@@ -1892,39 +1892,33 @@ class TriangleAPI extends \SoapClient {
 	}
 
 	private function ValidateCVVCount($paymentType, $cvv) {
-		$amexCount = 4;
-		$other     = 3;
-		$res       = FAlSE;
+		$AMEX_CVV_LENGTH               = 4;
+		$OTHER_CVV_LENGTH              = 3;
+		$TRIANGLEAPI_PAYMENT_TYPE_AMEX = 1;
 
-		if (!empty($paymentType) && !empty($cvv)) {
-			$count = strlen($cvv);
-
-			if ($paymentType == 1) {
-				$res = ($amexCount == $count)?true:false;
-			} else {
-				$res = ($other == $count)?true:false;
-			}
+		if (empty($paymentType)) {
+			return false;
 		}
 
-		return $res;
+		return ($paymentType === $TRIANGLEAPI_PAYMENT_TYPE_AMEX)?
+		$AMEX_CVV_LENGTH === strlen($cvv):
+		$OTHER_CVV_LENGTH === strlen($cvv);
 	}
 
 	private function ValidateCardNumberCount($paymentType, $cardNumber) {
-		$amexCount = 15;
-		$other     = 16;
-		$res       = FAlSE;
+		$AMEX_ACCOUNT_COUNT            = 15;
+		$OTHER_ACCOUNT_COUNT           = 16;
+		$TRIANGLEAPI_PAYMENT_TYPE_AMEX = 1;
 
-		if (!empty($paymentType) && !empty($cardNumber)) {
-			$count = strlen($cardNumber);
-
-			if ($paymentType == 1) {
-				$res = ($amexCount == $count)?true:false;
-			} else {
-				$res = ($other >= $count)?true:false;
-			}
+		if (empty($paymentType) || empty($cardNumber)) {
+			return false;
 		}
 
-		return $res;
+		$count = strlen($cardNumber);
+
+		return ($paymentType === $TRIANGLEAPI_PAYMENT_TYPE_AMEX)?
+		$AMEX_ACCOUNT_COUNT === $count:
+		$OTHER_ACCOUNT_COUNT === $count;
 	}
 
 	private function FormatParams($key, $params) {
